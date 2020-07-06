@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Résultats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="user != undefined">
+    <ion-item>
+      <h1>Résultats : </h1>
+    </ion-item>
+    <!-- <ion-label [(ngModel)]="test"> {{test}} </ion-label> -->
+    <div *ngFor = "let rep of reponsesFiche; let index = index;">
+      <ion-item *ngIf="rep['reponseTest_id'] == 1">
+        <h4> Demande nº {{ index+1 }} : </h4> &nbsp;
+        <h4> Pas encore traité </h4>
+      </ion-item>
+      <ion-item *ngIf="rep['reponseTest_id'] == 2">
+        <h4> Demande nº {{ index+1 }} : </h4> &nbsp;
+        <h4> Positif </h4>
+      </ion-item> 
+      <ion-item *ngIf="rep['reponseTest_id'] == 3">
+        <h4> Demande nº {{ index+1 }} : </h4> &nbsp;
+        <h4> Négatif </h4>
+      </ion-item> 
+    </div>
+  </div>
+</ion-content>

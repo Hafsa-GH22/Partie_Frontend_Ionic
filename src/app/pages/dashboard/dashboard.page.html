@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bienvenue</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 style="text-align: center;font-weight: bold;color: rgb(113, 113, 252);"> RESTEZ CHEZ VOUS. <br> SAUVEZ DES VIES.
+    Contribuez à arrêter le coronavirus. 
+  </h1>
+  <!-- <ion-img style="width: 362px; height: 500px;" src="/assets/"></ion-img> -->
+  <h2 style="text-align: center;">
+    GARDEZ une distance de sécurité
+  </h2>
+  <ion-img style="width: 362px; height: 500px;" src="/assets/distance.svg"></ion-img>
+  <h3 style="text-align: center;">
+    LAVEZ-VOUS souvent les mains
+  </h3>
+  <ion-img style="width: 362px; height: 500px;" src="/assets/wash.svg"></ion-img>
+  <h4 style="text-align: center;">
+    VOUS ÊTES MALADE? <br> Appelez votre médecin
+  </h4>
+  <ion-img style="width: 362px; height: 500px;" src="/assets/medecin.svg"></ion-img>
+  <div *ngIf="user != undefined">
+    <h1> &nbsp;&nbsp; Welcome {{ user.name }} </h1>
+  </div>
+  
+</ion-content>
